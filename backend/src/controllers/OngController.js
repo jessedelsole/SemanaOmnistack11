@@ -7,6 +7,9 @@ module.exports = {
         const {name, email,whatsapp, city, uf} = request.body;
         const id = crypto.randomBytes(4).toString('HEX');
        
+        console.log( request.body)    
+
+        try{
         await connection('ongs').insert(
             {
                 id,
@@ -16,7 +19,12 @@ module.exports = {
                 city,
                 uf,
             }
-        )
+        );
+        } catch(err){
+            console.log(err);
+        }
+
+
         response.json({id});
 
     },
