@@ -25,6 +25,8 @@ module.exports = {
     //Lista incidentes
     async index(request, response){
 
+       console.log('IncidentController index')     
+
       //retorna qtd de registros
       //entre colchetes, pega primeira poisicao do array
       const [count] = await connection('incidents').count()   

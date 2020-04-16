@@ -12,4 +12,7 @@ app.use(express.json());
 app.use(routes);
 app.use(errors());// troca erros de validação de 500 internal server error (celebrate) para bad request
 
-app.listen(3333);
+//app.listen(3333);
+
+
+module.exports = app;

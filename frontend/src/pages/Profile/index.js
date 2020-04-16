@@ -45,6 +45,8 @@ export default function Profile(){
     } 
 
     function handleLogout(){
+       
+        
         localStorage.clear();
         history.push('/');
     }
@@ -57,7 +59,7 @@ export default function Profile(){
                 <img src={logoImg} alt = "Be the Hero"/>
                 <span>Bem Vinda, {ongName} </span>
                 <Link className = "button" to ="/incidents/new">Cadastrar novo caso </Link>
-                <button onClick={()=>handleLogout} type = "button">
+                <button onClick={handleLogout} type = "button">
                   <FiPower size={18} color = "E02041"/>
                 </button>
                 
